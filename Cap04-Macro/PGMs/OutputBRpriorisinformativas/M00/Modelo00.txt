@@ -1,0 +1,16 @@
+model{
+  for(i in 1:n){ 
+    mu[i] <- alpha+beta1*(x1[i]-x1.mean)+beta2*(x2[i]-x2.mean)
+    y[i]~dnorm(mu[i], is.2)
+  }
+  
+  alpha  ~ dnorm(5, 0.01)
+  beta1  ~ dnorm(3, 0.01)
+  beta2  ~ dnorm(3, 0.01)
+
+  is.2  ~ dgamma(0.01, 0.01)
+  s.2 <- pow(is.2,-1)
+  x1.mean <- mean(x1[]);
+  x2.mean <- mean(x2[]);
+}
+	

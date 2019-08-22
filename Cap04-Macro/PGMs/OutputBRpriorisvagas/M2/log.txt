@@ -1,0 +1,57 @@
+display(log)
+check(C:/Users/Vinicius/Desktop/Encarceramento/Modelo2.txt)
+model is syntactically correct
+data(C:/Users/Vinicius/Desktop/Encarceramento/data.txt)
+data loaded
+compile(2)
+model compiled
+inits(1,C:/Users/Vinicius/Desktop/Encarceramento/inits1.txt)
+chain initialized but other chain(s) contain uninitialized variables
+inits(2,C:/Users/Vinicius/Desktop/Encarceramento/inits2.txt)
+model is initialized
+gen.inits()
+command #Bugs:gen.inits cannot be executed (is greyed out)
+thin.updater(100)
+update(1000)
+set(alpha)
+set(beta)
+set(beta1)
+set(beta2)
+set(beta3)
+set(s2.beta1)
+set(s2.beta2)
+set(s2.beta3)
+set(s2)
+set(deviance)
+dic.set()
+update(2000)
+coda(*,C:/Users/Vinicius/Desktop/Encarceramento/coda)
+stats(*)
+
+Node statistics
+	 node	 mean	 sd	 MC error	2.5%	median	97.5%	start	sample
+	alpha	5.488	0.09411	0.001213	5.298	5.487	5.672	1001	4000
+	beta	3.559	4.519	0.0695	-5.335	3.928	11.27	1001	4000
+	beta1	6.84	3.085	0.05087	0.8729	6.769	13.02	1001	4000
+	beta2	3.994	3.296	0.05462	-2.59	4.16	10.21	1001	4000
+	beta3	-2.055	3.412	0.05196	-8.64	-2.107	4.516	1001	4000
+	deviance	37.04	3.705	0.05541	31.92	36.37	45.55	1001	4000
+	s2	0.2432	0.07958	0.001252	0.1323	0.2286	0.4427	1001	4000
+	s2.beta1	742700.0	4.641E+7	725100.0	0.01275	9.99	10680.0	1001	4000
+	s2.beta2	142100.0	8.692E+6	138900.0	0.01101	2.172	4383.0	1001	4000
+	s2.beta3	43870.0	1.406E+6	21780.0	0.02084	45.41	31640.0	1001	4000
+dic.stats()
+
+DIC
+Dbar = post.mean of -2logL; Dhat = -2LogL at post.mean of stochastic nodes
+	Dbar	Dhat	pD	DIC	
+y1	15.274	13.760	1.515	16.789	
+y2	12.913	10.961	1.951	14.864	
+y3	8.854	7.135	1.719	10.573	
+total	37.041	31.856	5.185	42.226	
+history(*,C:/Users/Vinicius/Desktop/Encarceramento/history.odc)
+
+History
+
+save(C:/Users/Vinicius/Desktop/Encarceramento/log.odc)
+save(C:/Users/Vinicius/Desktop/Encarceramento/log.txt)

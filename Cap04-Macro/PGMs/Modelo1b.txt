@@ -1,0 +1,31 @@
+model{
+  for(i in 1:n1){ 
+    mu1[i] <- alpha1 + beta*(x1[i]-x1.mean)
+    y1[i]~dnorm(mu1[i], is2)
+  }
+  for(i in 1:n2){ 
+    mu2[i] <- alpha2 + beta*(x2[i]-x2.mean)
+    y2[i]~dnorm(mu2[i], is2)
+  }
+  for(i in 1:n3){ 
+    mu3[i] <- alpha3 + beta*(x3[i]-x3.mean)
+    y3[i]~dnorm(mu3[i], is2)
+  }
+
+  alpha1 ~ dnorm(alpha, is2.alpha)
+  alpha2 ~ dnorm(alpha, is2.alpha)
+  alpha3 ~ dnorm(alpha, is2.alpha)
+  
+  alpha ~ dnorm(0, 0.001)
+  beta  ~ dnorm(0, 0.001)
+
+  is2  ~ dgamma(0.01, 0.01)
+  is2.alpha ~ dgamma(0.01, 0.01)  
+  
+  s2 <- pow(is2,-1)
+  s2.alpha <- pow(is2.alpha,-1)
+  
+  x1.mean <- mean(x1[]);
+  x2.mean <- mean(x2[]);
+  x3.mean <- mean(x3[]);
+}

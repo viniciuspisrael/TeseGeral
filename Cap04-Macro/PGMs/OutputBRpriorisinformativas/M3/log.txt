@@ -1,0 +1,69 @@
+display(log)
+check(C:/Users/Vinicius/Desktop/Encarceramento/Modelo3.txt)
+model is syntactically correct
+data(C:/Users/Vinicius/Desktop/Encarceramento/data.txt)
+data loaded
+compile(2)
+model compiled
+inits(1,C:/Users/Vinicius/Desktop/Encarceramento/inits1.txt)
+chain initialized but other chain(s) contain uninitialized variables
+inits(2,C:/Users/Vinicius/Desktop/Encarceramento/inits2.txt)
+model is initialized
+gen.inits()
+command #Bugs:gen.inits cannot be executed (is greyed out)
+thin.updater(100)
+update(1000)
+set(alpha)
+set(beta)
+set(alpha1)
+set(alpha2)
+set(alpha3)
+set(beta1)
+set(beta2)
+set(beta3)
+set(s2.alpha1)
+set(s2.alpha2)
+set(s2.alpha3)
+set(s2.beta1)
+set(s2.beta2)
+set(s2.beta3)
+set(s2)
+set(deviance)
+dic.set()
+update(2000)
+coda(*,C:/Users/Vinicius/Desktop/Encarceramento/coda)
+stats(*)
+
+Node statistics
+	 node	 mean	 sd	 MC error	2.5%	median	97.5%	start	sample
+	alpha	5.487	0.4584	0.007635	4.677	5.522	6.214	1001	4000
+	alpha1	5.082	0.1565	0.00245	4.782	5.081	5.391	1001	4000
+	alpha2	5.59	0.1104	0.001984	5.376	5.589	5.806	1001	4000
+	alpha3	5.697	0.1497	0.002193	5.397	5.694	5.997	1001	4000
+	beta	3.798	4.359	0.06556	-5.417	4.455	11.15	1001	4000
+	beta1	7.255	2.584	0.04075	2.091	7.233	12.37	1001	4000
+	beta2	4.207	2.892	0.03793	-1.667	4.39	9.441	1001	4000
+	beta3	-2.615	2.843	0.04437	-8.224	-2.672	2.995	1001	4000
+	deviance	26.64	4.682	0.07252	19.96	25.86	37.84	1001	4000
+	s2	0.1667	0.05932	0.00106	0.08848	0.1549	0.3165	1001	4000
+	s2.alpha1	707.5	13850.0	211.7	0.0107	0.42	254.1	1001	4000
+	s2.alpha2	2154.0	102600.0	1642.0	0.006641	0.1642	98.05	1001	4000
+	s2.alpha3	243.9	9900.0	157.1	0.007499	0.1904	126.4	1001	4000
+	s2.beta1	61970.0	2.685E+6	42790.0	0.01255	9.637	14310.0	1001	4000
+	s2.beta2	10110.0	366700.0	5841.0	0.01013	2.018	3582.0	1001	4000
+	s2.beta3	176800.0	4.095E+6	68700.0	0.02993	72.97	36530.0	1001	4000
+dic.stats()
+
+DIC
+Dbar = post.mean of -2logL; Dhat = -2LogL at post.mean of stochastic nodes
+	Dbar	Dhat	pD	DIC	
+y1	9.658	7.320	2.337	11.995	
+y2	10.643	8.059	2.584	13.226	
+y3	6.341	3.898	2.443	8.785	
+total	26.641	19.277	7.364	34.006	
+history(*,C:/Users/Vinicius/Desktop/Encarceramento/history.odc)
+
+History
+
+save(C:/Users/Vinicius/Desktop/Encarceramento/log.odc)
+save(C:/Users/Vinicius/Desktop/Encarceramento/log.txt)
